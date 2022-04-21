@@ -10,9 +10,6 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
       - name: Indepth analysis
         uses: lowlighter/metrics@latest
         with:
@@ -23,5 +20,5 @@ jobs:
           plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
           plugin_languages_indepth: yes
           plugin_languages_details: lines, bytes-size
-          plugin_languages_limit: 4
+          plugin_languages_limit: 6
           plugin_languages_analysis_timeout: 15
